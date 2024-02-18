@@ -9,7 +9,7 @@ namespace DemoAppAutomation.Tests
     {
         static UserData data = new UserData();
 
-        [Test, TestCaseSource("GetCsvUserDetailsCases")]
+        [Test, TestCaseSource(nameof(GetCsvUserDetailsCases))]
         public void UpdateUserDetails(string firstName, string lastName, string birthDate, string gender, string city)
         {
             data.Update(firstName, lastName, birthDate, gender, city);

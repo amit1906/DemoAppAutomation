@@ -6,7 +6,7 @@ namespace DemoAppAutomation.Tests
 {
     internal class LoginTests : BaseTest
     {
-        [Test, TestCaseSource("GetCsvTestCasesBaseLoginCredentials")]
+        [Test, TestCaseSource(nameof(GetCsvTestCasesBaseLoginCredentials))]
         public void LoginWithBadCredentialsFail(string user, string pass)
         {
             using var driver = InitDriver(true);
